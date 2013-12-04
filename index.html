@@ -41,5 +41,11 @@ title: Tom Bullough
 
 		<!-- {{ content }} -->
 
+		{{ page.url }}
+
+		{% for service in site.data.services %}
+  <li>{{ service.name }}</li>
+{% endfor %}
+
 	</body>
 </html>
