@@ -3,4 +3,41 @@ layout: default
 title: Tom Bullough
 ---
 
-** index.html **
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>{{ page.title }}</title>
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+
+	</head>
+	<body>
+
+		<h1>I am Tom Bullough. Developing athletes to full potential.</h1>
+
+<section>
+	{% include about.html %}
+</section>
+
+<section>
+	{% include articles.html %}
+</section>
+
+<section>
+	{% include testimonials.html %}
+</section>
+
+<section>
+	{% include services.html %}
+</section>
+
+<section>
+	{% include shop.html %}
+</section>
+
+	</body>
+</html>
