@@ -1,37 +1,18 @@
-<h2>Services</h2>
+{% for service in site.data.servicesList %}
+	{% if forloop.index == 1 %}
+		<h2>{{ service.heading }}</h2>
+		<ul>
+	{% endif %}
+	
+	<li class="service{{ forloop.index }} ">{{ service.title }}</li>
 
-<ul>
-{% for service in site.data.services %}
-  <li>{{ service.name }}</li>
 {% endfor %}
 </ul>
 
-<div>
-	<h3>Service 1 &pound;xx.xx (inc VAT)</h3>
-
-	<p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p>
-
-	<p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p>
-
+{% for service in site.data.services %}
+  <div>
+	<h3>{{ service.title }}</h3>
+	{{ service.content }}
 	<a href="">Arrange a session</a>
-</div>
-
-<div>
-	<h3>Service 2 &pound;xx.xx (inc VAT)</h3>
-
-	<p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p>
-
-	<p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p>
-
-	<a href="">Arrange a session</a>
-</div>
-
-<div>
-	<h3>Service 3 &pound;xx.xx (inc VAT)</h3>
-
-	<p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p>
-
-	<p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p>
-
-	<a href="">Arrange a session</a>
-</div>
+  </div>
+{% endfor %}

@@ -1,17 +1,10 @@
-<h2>Latest Articles</h2>
-
-<div>
-	<h3>Article Titile 1</h3>
-
-	<p>Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles</p>
-
-	<p>Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles</p>
-</div>
-
-<div>
-	<h3>Article Titile 2</h3>
-
-	<p>Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles</p>
-
-	<p>Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles Some info on articles</p>
-</div>
+{% for article in site.data.articles %}
+	{% if forloop.index == 1 %}
+		<h2 class="sectionTitle articleTitle">{{ article.title }}</h2>
+	{% endif %}
+	
+	<div class="article">
+		<p class="articleSubTitle">{{ article.title }}</p>
+		{{ article.content }}
+	</div>
+{% endfor %}

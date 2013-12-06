@@ -1,11 +1,8 @@
-- name: Service1
-  price: 99.99
-  description: description of Service1
+- title: Service 1 &pound;xx.xx (inc VAT)
+  content: <p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p><p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p>
 
-- name: Service2
-  price: 199.99
-  description: description of Service2
+- title: Service 2 &pound;xx.xx (inc VAT)
+  content: <p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p><p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p>
 
-- name: service3
-  price: 299.99
-  description: description of service3
+- title: Service 3 &pound;xx.xx (inc VAT)
+  content: <p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p><p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p>

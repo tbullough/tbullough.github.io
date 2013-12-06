@@ -1,11 +1,7 @@
-<h2>About Tom Bullough</h2>
-
-<p>As a graduate from Sheffield Hallam University Tom achieved his Honours Degree in Sport and Exercise Science and immediately pursued his career in Strength and Conditioning by undertaking an Internship with Sale Sharks RFC. After a successful year working under the guidance of Nick Johnston, Tom was offered a full time position at with Northampton Saints RFC. Within the Saints Performance Department Tom emerged as a pivotal member of the team and developed into an excellent and accomplished practitioner. A dedicated and perceptive Strength and Conditioning coach, Tom has the great ability to communicate with athletes of all levels and gain the desired outcome – high performance every time!</p>
-
-<p>Toms appetite for learning and continued education has driven him to work with and receive guidance from some of the best practitioners in the industry namely Bill Knowles, Frans Bosch and Eric Cressey to name a few.</p>
-
-<p>During his time working with the Saints Senior team Toms main areas of specialism are shoulder injury prevention strategies and Maximal Strength development for rugby. His influence in these areas with the Senior squad is unquestionable.osteopaths, coaches and players.</p>
-
-<p>As an accomplished golfer Tom has a handicap of +1, so has 'real world appreciation' of the technical and physical needs of golf performance at the highest level. This website will be a resource to help you improve your flexibility, mobility, strength and ultimately your ability as a golfer, through specific strength and conditioning techniques.</p>
-
-{{ page.url }}
+{% for about in site.data.about %}
+	{% if forloop.index == 1 %}
+		<h2 class="sectionTitle aboutTitle">{{ about.title }}</h2>
+	{% endif %}
+	
+	<p class="aboutParagraph">{{ about.paragraph }}</p>
+{% endfor %}

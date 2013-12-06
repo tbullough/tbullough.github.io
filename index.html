@@ -19,33 +19,29 @@ title: Tom Bullough
 
 		<h1>I am Tom Bullough. Developing athletes to full potential.</h1>
 
-		<section>
+		<div id="about">
 			{% include about.html %}
-		</section>
+		</div>
 
-		<section>
+		<div id="articles">
 			{% include articles.html %}
-		</section>
+		</div>
 
-		<section>
+		<div id="testimonials">
 			{% include testimonials.html %}
-		</section>
+		</div>
 
-		<section>
+		<div id="services">
 			{% include services.html %}
-		</section>
+		</div>
 
-		<section>
+		<div id="videos">
+			{% include videos.html %}
+		</div>
+
+		<div id="shop">
 			{% include shop.html %}
-		</section>
-
-		<!-- {{ content }} -->
-
-		{{ page.url }}
-
-		{% for service in site.data.services %}
-  <li>{{ service.name }}</li>
-{% endfor %}
+		</div>
 
 	</body>
 </html>
