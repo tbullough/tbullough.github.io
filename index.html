@@ -14,33 +14,40 @@ title: Tom Bullough
 		<title>{{ page.title }}</title>
 		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
 
+		<link href='http://fonts.googleapis.com/css?family=Lato|BenchNine' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" media="all" href="css/tombullough.css">
+
 	</head>
 	<body>
 
 		<h1>I am Tom Bullough. Developing athletes to full potential.</h1>
 
-		<div id="about">
-			{% include about.html %}
-		</div>
+		<div id="container">
 
-		<div id="articles">
-			{% include articles.html %}
-		</div>
+			<div id="about">
+				{% include about.html %}
+			</div>
 
-		<div id="testimonials">
-			{% include testimonials.html %}
-		</div>
+			<div id="articles">
+				{% include articles.html %}
+			</div>
 
-		<div id="services">
-			{% include services.html %}
-		</div>
+			<div id="testimonials">
+				{% include testimonials.html %}
+			</div>
 
-		<div id="videos">
-			{% include video.html %}
-		</div>
+			<div id="services">
+				{% include services.html %}
+			</div>
 
-		<div id="shop">
-			{% include shop.html %}
+			<div id="videos">
+				{% include video.html %}
+			</div>
+
+			<div id="shop">
+				{% include shop.html %}
+			</div>
+
 		</div>
 
 	</body>

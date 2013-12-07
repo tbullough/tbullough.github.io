@@ -1,7 +1,15 @@
-{% for about in site.data.about %}
-	{% if forloop.index == 1 %}
-		<h2 class="sectionTitle aboutTitle">{{ about.title }}</h2>
-	{% endif %}
+<div class="container">
+
+	<div class="sectionIcon"></div>
+
+	{% for about in site.data.about %}
 	
-	<p class="aboutParagraph">{{ about.paragraph }}</p>
-{% endfor %}
+		{% if forloop.index == 1 %}
+			<h2 class="sectionTitle aboutTitle">{{ about.title }}</h2>
+		{% endif %}
+	
+		<p class="aboutParagraph">{{ about.paragraph }}</p>
+
+	{% endfor %}
+
+</div>

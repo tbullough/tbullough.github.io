@@ -1,18 +1,30 @@
-{% for service in site.data.servicesList %}
-	{% if forloop.index == 1 %}
-		<h2>{{ service.heading }}</h2>
-		<ul>
-	{% endif %}
+<div class="container">
+
+	<div class="sectionIcon"></div>
+
+	{% for service in site.data.servicesList %}
 	
-	<li class="service{{ forloop.index }} ">{{ service.title }}</li>
+		{% if forloop.index == 1 %}
+			<h2>{{ service.heading }}</h2>
+			<ul>
+		{% endif %}
+	
+		<li class="service{{ forloop.index }} ">{{ service.title }}</li>
 
-{% endfor %}
-</ul>
+	{% endfor %}
 
-{% for service in site.data.services %}
-  <div>
-	<h3>{{ service.title }}</h3>
-	{{ service.content }}
-	<a href="">Arrange a session</a>
-  </div>
-{% endfor %}
+	</ul>
+
+	{% for service in site.data.services %}
+  	
+  		<div>
+	
+			<h3>{{ service.title }}</h3>
+			{{ service.content }}
+			<a href="">Arrange a session</a>
+  	
+  		</div>
+
+	{% endfor %}
+
+</div>

@@ -1,0 +1,35 @@
+body {
+	font-family: 'Lato', sans-serif;
+	line-height: 1.6em;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 55px 0;
+	position: relative;
+	width: 900px;
+}
+
+.sectionIcon {
+	background-color: #EEE;
+	border-radius: 35px;
+	left: 50%;
+	position: absolute;
+	top: -35px;
+	height: 70px;
+	width: 70px;
+}
+
+h1, h2 {
+	color: #64BB5D;
+	font-family: 'BenchNine', sans-serif;
+	text-transform: uppercase;
+}
+
+#about,
+#testimonials,
+#videos {
+	background-color: #EEE;
+}
