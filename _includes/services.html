@@ -1,7 +1,7 @@
 <div class="container">
 
 	<div class="sectionIcon">
-		<div class="servicesIcon"></div>
+		<span class="fui-cmd"></span>
 	</div>
 
 	{% for service in site.data.servicesList %}
@@ -22,7 +22,7 @@
   		<div>
 	
 			<h3>{{ service.title }}</h3>
-			{{ service.content }}
+			<div class="columns">{{ service.content }}</div>
 			<a href="">Arrange a session</a>
   	
   		</div>
