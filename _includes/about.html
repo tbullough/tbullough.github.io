@@ -9,9 +9,17 @@
 		{% if forloop.index == 1 %}
 			<h2 class="sectionTitle aboutTitle">{{ about.title }}</h2>
 		{% endif %}
-	
-		<p class="aboutParagraph">{{ about.paragraph }}</p>
 
 	{% endfor %}
+
+	<div class="columns">
+
+		{% for about in site.data.about %}
+
+			<p class="aboutParagraph">{{ about.paragraph }}</p>
+
+		{% endfor %}
+
+	</div>
 
 </div>

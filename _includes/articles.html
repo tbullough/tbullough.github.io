@@ -11,8 +11,13 @@
 		{% endif %}
 	
 		<div class="article">
+			
 			<p class="articleSubTitle">{{ article.title }}</p>
-			{{ article.content }}
+			
+			<div class="columns">
+				{{ article.content }}
+			</div>
+			
 		</div>
 
 	{% endfor %}
