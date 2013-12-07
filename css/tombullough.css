@@ -68,11 +68,18 @@ p { margin: 0 0 1em; }
 	float: none;
 }
 
+#container {
+	background-color: #FFF;
+	position: relative;
+	z-index: 3;
+}
+
 .container {
 	margin: 0 auto;
 	padding: 55px 20px;
 	position: relative;
 	max-width: 900px;
+	z-index: 3;
 }
 
 
@@ -85,7 +92,10 @@ p { margin: 0 0 1em; }
 
 #about,
 #testimonials,
-#videos {
+#videos,
+#about .container,
+#testimonials .container,
+#videos .container {
 	background-color: #EEE;
 }
 
@@ -100,6 +110,10 @@ p { margin: 0 0 1em; }
 #background {
 	background-color: #4d515d;
 	height: 200px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
 }
 
 
@@ -113,6 +127,9 @@ p { margin: 0 0 1em; }
 #navigation {
 	background-color: #64BB5D;
 	height: 100px;
+	margin-top: 200px;
+	position: relative;
+	z-index: 2;
 }
 
 
