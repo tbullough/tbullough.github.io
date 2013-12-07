@@ -5,6 +5,19 @@ body {
 	padding: 0;
 }
 
+h1, h2 {
+	color: #64BB5D;
+	font-family: 'BenchNine', sans-serif;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 36px;
+	margin: 0 0 1em;
+}
+
+p { margin: 0 0 1em; }
+
 .clear {
 	clear: both;
 	float: none;
@@ -17,6 +30,10 @@ body {
 	max-width: 900px;
 }
 
+
+
+
+
 /*
 	Background Colours
 */
@@ -26,6 +43,10 @@ body {
 #videos {
 	background-color: #EEE;
 }
+
+
+
+
 
 /*
 	Section Icons
@@ -51,11 +72,9 @@ body {
 	width: 70px;
 }
 
-h1, h2 {
-	color: #64BB5D;
-	font-family: 'BenchNine', sans-serif;
-	text-transform: uppercase;
-}
+
+
+
 
 /*
 	Articles
@@ -73,6 +92,10 @@ h1, h2 {
 	font-size: 18px;
 	font-weight: 700;
 }
+
+
+
+
 
 /*
 	Testimonials
@@ -117,6 +140,84 @@ h1, h2 {
 
 .testimonialBrief { color: #64BB5D; }
 
+@media only screen and (max-width : 640px) {
+
+	.testimonialInformation {
+		float: left;
+		margin: 0;
+		width: 85%;
+	}
+
+	.testimonialContent {
+		float: left;
+		margin: 0 0 0 15%;
+		width: 85%;
+	}
+
+}
+
+
+
+
+
+/*
+	Services
+*/
+
+.servicesList {
+	list-style: none outside;
+	margin: 40px 0;
+	padding: 0;
+
+	-moz-column-count: 4;
+	-webkit-column-count: 4;
+	-moz-column-gap: 0;
+	-webkit-column-gap: 0;
+}
+
+@media only screen and (max-width : 640px) {
+	.servicesList {
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		-moz-column-gap: 0;
+		-webkit-column-gap: 0;
+	}
+}
+
+.servicesList span {
+	color: #64BB5D;
+	padding: 0 10px 0 0;
+}
+
+.service {
+	border-top: 1px solid #EEE;
+	margin: 40px 0 0;
+	padding: 40px 0 0;
+}
+
+.service h3 { margin: 0 0 20px; }
+
+.serviceArrange {
+	background-color: #EEE;
+	border-bottom: 5px solid #CCC;
+	color: #333;
+	float: right;
+	line-height: 20px;
+	margin: 24px 0 0;
+	padding: 10px 10px 14px 10px;
+	text-decoration: none;
+}
+
+.serviceArrange span {
+	color: #64BB5D;
+	font-size: 20px;
+	padding: 0 0 0 10px;
+}
+
+
+
+
+
 /*
 	Columns
 */
@@ -127,8 +228,6 @@ h1, h2 {
 	-moz-column-gap: 40px;
 	-webkit-column-gap : 40px;
 }
-
-.columns p { margin: 0 0 1em; }
 
 @media only screen and (max-width : 640px) {
 

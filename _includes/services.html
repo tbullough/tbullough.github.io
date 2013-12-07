@@ -8,10 +8,10 @@
 	
 		{% if forloop.index == 1 %}
 			<h2>{{ service.heading }}</h2>
-			<ul>
+			<ul class="servicesList">
 		{% endif %}
 	
-		<li class="service{{ forloop.index }} ">{{ service.title }}</li>
+		<li class="service{{ forloop.index }} "><span class="fui-check"></span> {{ service.title }}</li>
 
 	{% endfor %}
 
@@ -19,12 +19,13 @@
 
 	{% for service in site.data.services %}
   	
-  		<div>
+  		<div class="service">
 	
 			<h3>{{ service.title }}</h3>
 			<div class="columns">{{ service.content }}</div>
-			<a href="">Arrange a session</a>
-  	
+			<a class="serviceArrange" href="">Arrange a session <span class="fui-calendar-solid"></span></a>
+  			<div class="clear"></div>
+
   		</div>
 
 	{% endfor %}
