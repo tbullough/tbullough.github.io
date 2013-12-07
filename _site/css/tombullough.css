@@ -79,7 +79,6 @@ p { margin: 0 0 1em; }
 	padding: 55px 20px;
 	position: relative;
 	max-width: 900px;
-	z-index: 3;
 }
 
 
@@ -92,12 +91,7 @@ p { margin: 0 0 1em; }
 
 #about,
 #testimonials,
-#videos,
-#about .container,
-#testimonials .container,
-#videos .container {
-	background-color: #EEE;
-}
+#videos { background-color: #EEE; }
 
 
 
@@ -129,7 +123,7 @@ p { margin: 0 0 1em; }
 	height: 100px;
 	margin-top: 200px;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 }
 
 
