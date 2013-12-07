@@ -7,18 +7,28 @@ body {
 
 .container {
 	margin: 0 auto;
-	padding: 55px 0;
+	padding: 55px 20px;
 	position: relative;
-	width: 900px;
+	max-width: 900px;
 }
 
+/*
+	Section Icons
+*/
+
 .sectionIcon {
-	background-color: #EEE;
-	border-radius: 35px;
 	left: 50%;
 	position: absolute;
 	top: -35px;
+	width: 0;
+}
+
+.sectionIcon div {
+	background-color: #EEE;
+	border-radius: 35px;
 	height: 70px;
+	left: -35px;
+	position: relative;
 	width: 70px;
 }
 
