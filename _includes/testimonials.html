@@ -11,9 +11,22 @@
 		{% endif %}
 	
 		<div class="testimonial">
-			<p class="testimonialSubTitle">#{{ forloop.index }} {{ testimonial.title }}</p>
-			<p class="testimonialBrief">{{ testimonial.brief }}</p>
-			{{ testimonial.content }}
+			
+			<div class="testimonialPhoto">
+				<img src="{{ testimonial.image }}" />
+			</div>
+			
+			<div class="testimonialInformation">
+				<div class="testimonialSubTitle">#{{ forloop.index }} {{ testimonial.title }}</div>
+				<div class="testimonialBrief">{{ testimonial.brief }}</div>
+			</div>
+
+			<div class="testimonialContent">
+				{{ testimonial.content }}
+			</div>
+
+			<div class="clear"></div>
+
 		</div>
 
 	{% endfor %}
