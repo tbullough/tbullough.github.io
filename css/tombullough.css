@@ -365,6 +365,51 @@ p { margin: 0 0 1em; }
 	max-width: 100%;
 }
 
+#videos a {
+	text-decoration: none;
+}
+
+#videos .videoTitle {
+	color: #333;
+	font-family: 'latobold', sans-serif;
+	font-weight: 700;
+	margin: 10px 0 0;
+}
+
+#videos .videoDescription {
+	color: #333;
+	font-family: 'latoregular', sans-serif;
+	font-weight: 400;
+	margin: 0;
+}
+
+.videoMore {
+	background-color: #FFF;
+	border-bottom: 5px solid #CCC;
+	color: #333;
+	float: right;
+	line-height: 20px;
+	margin: 24px 0 0;
+	padding: 10px 10px 14px 10px;
+	text-decoration: none;
+}
+
+.videoMore span {
+	color: #64BB5D;
+	font-size: 20px;
+	padding: 0 0 0 10px;
+}
+
+@media only screen and (max-width : 640px) {
+
+	#videos ul li {
+		float: none;
+		margin: 0 0 40px;
+		width: 100%;
+	}
+
+}
+
 
 
 
