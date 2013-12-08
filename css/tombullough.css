@@ -122,16 +122,17 @@ p { margin: 0 0 1em; }
 
 @media only screen and (max-width : 640px) {
 
-	#background { height: 250px; }
+	#background { height: 200px; }
 
 	#background .container {
 		background-position: 100% 50%;
-		height: 250px;
+		height: 200px;
+		padding: 25px 20px;
 	}
 
 	#background h1 {
-		font-size: 38px;
-		line-height: 38px;
+		font-size: 32px;
+		line-height: 32px;
 	}
 
 }
@@ -154,9 +155,7 @@ p { margin: 0 0 1em; }
 
 @media only screen and (max-width : 640px) {
 
-	#navigation {
-		margin-top: 250px;
-	}
+	#navigation { margin-top: 200px; }
 
 }
 
