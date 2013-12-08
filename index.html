@@ -17,8 +17,11 @@ title: Tom Bullough
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" type="text/css" media="all" href="css/tombullough.css">
-		<link rel="stylesheet" type="text/css" media="all" href="css/flat-ui.css" >
+		<link rel="stylesheet" type="text/css" media="all" href="css/flat-ui.css">
+		<link rel="stylesheet" type="text/css" media="all" href="css/prettyPhoto.css">
+
 	</head>
+
 	<body>
 
 		<div id="background">
@@ -150,7 +153,7 @@ title: Tom Bullough
 					slideshow: false
 				}
 
-				$('#thumbs a[rel="prettyPhoto"]').prettyPhoto(prettyPhotoSettings);
+				$('#videos a[rel="prettyPhoto"]').prettyPhoto(prettyPhotoSettings);
 
 				$('#showMoreThumbs').on('click', function () {
 					loadVidPage(tbVideos, currentPage + 1, vidsPerPage);
