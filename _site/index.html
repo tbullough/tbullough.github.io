@@ -8,6 +8,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Tom Bullough</title>
 		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" type="text/css" media="all" href="css/tombullough.css">
 		<link rel="stylesheet" type="text/css" media="all" href="css/flat-ui.css" >
@@ -340,6 +342,16 @@
 
 	<h2>Videos</h2>
 
+	<div id="videoThumbs">
+		<ul id="thumbs"></ul>
+	</div>
+
+	<div class="clear"></div>
+
+	<p class="showMoreThumbs">
+		<a href="#" id="showMoreThumbs">View more</a>
+	</p>
+
 </div>
 			</div>
 
@@ -365,7 +377,108 @@
 
 		</div>
 
+		<script type="text/javascript" src="js/modernizr.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+
 		<script>
+			// Vimeo
+			var vimeoUserName = 'jonathanbidston',
+				videosCallback = 'showThumbs',
+				videosUrl = 'http://vimeo.com/api/v2/' + vimeoUserName + '/videos.json?callback=' + videosCallback;
+
+			function init () {
+				var head = document.getElementsByTagName('head').item(0),
+					videosJs = document.createElement('script');	
+
+				videosJs.setAttribute('type', 'text/javascript');
+				videosJs.setAttribute('src', videosUrl);
+
+				head.appendChild(videosJs);
+			}
+
+			function showThumbs (videos) {
+				tbVideos = videos;
+				vidsPerPage = 6;
+				loadVidPage(tbVideos, 1, vidsPerPage);
+			}
+
+			function loadVidPage (videos, vidPage, vidsPerPage) {
+				currentPage = vidPage;
+
+				var videoStart = (vidPage - 1) * vidsPerPage,
+					videoEnd = vidPage * vidsPerPage;
+
+				for (var i = videoStart; i < videoEnd; i++) {
+					if (i < videos.length) {
+						console.log(videos[i]);
+
+						var thumb = document.createElement('img');
+						thumb.setAttribute('src', videos[i].thumbnail_large);
+						thumb.setAttribute('alt', videos[i].title);
+						thumb.setAttribute('title', videos[i].title);
+
+						var a = document.createElement('a');
+
+						if (Modernizr.mq('only screen and (max-width: 600px)') || Modernizr.mq('only screen and (max-height: 520px)')) {
+							a.setAttribute('href', '//player.vimeo.com/video/' + videos[i].id);
+						} else {
+							a.setAttribute('href', videos[i].url);
+							a.setAttribute('rel', 'prettyPhoto');
+						}
+
+						a.appendChild(thumb);
+
+						var p = document.createElement('p');
+						p.innerHTML = videos[i].title;
+						p.className = "videoTitle";
+						a.appendChild(p);
+
+						var p2 = document.createElement('p');
+						p2.innerHTML = videos[i].description;
+						p2.className = "videoDescription";
+						a.appendChild(p2);
+
+						var vidClass = "";
+						if ((i + 1) % 3 === 0) {
+							vidClass = "last";
+						}
+
+						var li = document.createElement('li');
+						li.className = vidClass;
+						li.appendChild(a);
+
+						var ul = document.getElementById('thumbs');
+						ul.appendChild(li);
+					
+					} else {
+						document.getElementById('showMoreThumbs').style.display = "none";
+						break;
+					}
+				}
+
+				var prettyPhotoSettings = {
+					social_tools: false,
+					deeplinking: false,
+					slideshow: false
+				}
+
+				$('#thumbs a[rel="prettyPhoto"]').prettyPhoto(prettyPhotoSettings);
+
+				$('#showMoreThumbs').on('click', function () {
+					loadVidPage(tbVideos, currentPage + 1, vidsPerPage);
+					return false;
+				});
+			}
+
+			$(function(){
+				init();
+			});
+		</script>
+
+		<script>
+			// Google Analytics
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

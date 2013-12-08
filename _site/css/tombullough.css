@@ -341,6 +341,35 @@ p { margin: 0 0 1em; }
 
 
 /*
+	Videos
+*/
+
+#videos ul {
+	list-style: none outside;
+	margin: 0;
+	padding: 0;
+}
+
+#videos ul li {
+	float: left;
+	margin: 0 5% 40px 0;
+	width: 30%;
+}
+
+#videos ul .last {
+	margin: 0 0 40px;
+}
+
+#videos ul img {
+	border: 0;
+	max-width: 100%;
+}
+
+
+
+
+
+/*
 	Columns
 */
 
