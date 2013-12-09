@@ -88,7 +88,9 @@ p { margin: 0 0 1em; }
 	max-width: 900px;
 }
 
-
+#navigation .container {
+	padding: 15px 20px;
+}
 
 
 
@@ -113,6 +115,7 @@ p { margin: 0 0 1em; }
 #background {
 	background: #40444C url('../img/backgroundTile.png') repeat-x;
 	height: 370px;
+	overflow: hidden;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -155,11 +158,118 @@ p { margin: 0 0 1em; }
 */
 
 #navigation {
-	background-color: #64BB5D;
+	background-color: transparent;
 	height: 100px;
 	top: 370px;
 	position: relative;
 	z-index: 2;
+}
+
+#logo {
+	display: block;
+	left: 20px;
+	position: absolute;
+	top: 15px;
+}
+
+#menu {
+	background-color: #FFF;
+	border-bottom: 5px solid #CCC;
+	color: #777;
+	cursor: pointer;
+	display: block;
+	left: 40%;
+	padding: 12px 10px 12px 10px;
+	position: absolute;
+	top: 24px;	
+	width: 20%;
+}
+
+#menu span {
+	float: right;
+	font-size: 20px;
+	padding: 0 0 0 10px;
+}
+
+#navigation .greenBand {
+	background-color: #64BB5D;
+	height: 100px;
+	width: 100%;
+}
+
+.menuBand {
+	background-color: #FFF;
+	border-bottom: 5px solid #64BB5D;
+	height: 0;
+	overflow: hidden;
+	position: relative;
+	top: 0;
+
+	-webkit-transition: height 0.3s ease-in;
+	-moz-transition: height 0.3s ease-in;
+	-o-transition: height 0.3s ease-in;
+	transition: height 0.3s ease-in;
+}
+
+.openMenu .menuBand {
+	height: 137px;
+}
+
+.menuBand a {
+	background-color: #EEE;
+	border-bottom: 5px solid #CCC;
+	color: #777;
+	display: block;
+	float: left;
+	font-size: 14px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 1.3% 12px 0;
+	padding: 12px 1.5%;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 21%;
+}
+
+.menuBand a span {
+	float: right;
+	font-size: 20px;
+	padding: 0 0 0 10px;
+}
+
+@media only screen and (max-width : 900px) {
+	.menuBand a span {
+		display: none;
+	}
+}
+
+@media only screen and (max-width : 780px) {
+	.menuBand a {
+		font-size: 80%;
+	}
+}
+
+@media only screen and (max-width : 500px) {
+	.menuBand a {
+		margin: 0 4% 12px 0;
+		width: 45%;
+	}
+
+	.menuBand .second {
+		margin: 0 0 12px;
+	}
+
+	.openMenu .menuBand {
+		height: 262px;
+	}
+}
+
+.menuBand .fourth {
+	margin: 0 0 12px;
+}
+
+.menuBand a:hover {
+	color: #333;
 }
 
 @media only screen and (max-width : 640px) {
