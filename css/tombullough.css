@@ -172,6 +172,16 @@ p { margin: 0 0 1em; }
 	top: 15px;
 }
 
+@media only screen and (max-width : 500px) {
+	#navigation {
+		height: 60px;
+	}
+
+	#logo img {
+		width: 50%;
+	}
+}
+
 #menu {
 	background-color: #FFF;
 	border-bottom: 5px solid #CCC;
@@ -185,6 +195,14 @@ p { margin: 0 0 1em; }
 	width: 20%;
 }
 
+@media only screen and (max-width : 500px) {
+	#menu {
+		right: 10px;
+		left: auto;
+		top: 8px;
+	}
+}
+
 #menu span {
 	float: right;
 	font-size: 20px;
@@ -195,6 +213,12 @@ p { margin: 0 0 1em; }
 	background-color: #64BB5D;
 	height: 100px;
 	width: 100%;
+}
+
+@media only screen and (max-width : 500px) {
+	#navigation .greenBand {
+		height: 60px;
+	}
 }
 
 .menuBand {
