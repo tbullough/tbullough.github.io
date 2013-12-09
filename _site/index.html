@@ -29,11 +29,11 @@
 
 		</div>
 
+		<div id="navigation">
+
+		</div>
+
 		<div id="container">
-
-			<div id="navigation">
-
-			</div>
 
 			<div id="about">
 				<div class="container">
@@ -384,6 +384,7 @@
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery.dropdown.js"></script>
 		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+		<script type="text/javascript" src="js/jquery.stickyPanel.min.js"></script>
 
 		<script>
 			// Vimeo
@@ -479,6 +480,17 @@
 				init();
 			});
 		</script>
+
+		<script type="text/javascript">
+			// StickyPanel
+	        $().ready(function () {
+	            var stickyPanelOptions = {
+	                afterDetachCSSClass: "",
+	                savePanelSpace: true
+	            };
+	            $("#navigation").stickyPanel(stickyPanelOptions);
+	        });
+	    </script>
 
 		<script>
 			// Google Analytics
