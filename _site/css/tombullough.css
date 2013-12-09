@@ -164,7 +164,10 @@ p { margin: 0 0 1em; }
 
 @media only screen and (max-width : 640px) {
 
-	#navigation { top: 200px; }
+	#navigation {
+		height: 50px;
+		top: 200px;
+	}
 
 }
 
