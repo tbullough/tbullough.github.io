@@ -533,20 +533,23 @@
 	        // Scroll To Top Link
 			$(function() {
 				$(window).scroll(function () {
-					if ($(this).scrollTop() > 100) {
+					var $this = $(this);
+
+					if ($this.scrollTop() > 100 && !($this.hasClass('scrolling'))) {
 						$('#toTop').fadeIn();	
 					} else {
+						$this.removeClass('scrolling');
 						$('#toTop').fadeOut();
 					}
 				});
 			 
 				$('#toTop').on('click', function () {
-					$(this).fadeOut();
+					$(this).addClass('scrolling').fadeOut();
 					$('body, html').animate({scrollTop: 0}, 800);
 				});	
 
 				$('.touch #toTop').on('hover', function () {
-					$(this).fadeOut();
+					$(this).addClass('scrolling').fadeOut();
 					$('body, html').animate({scrollTop: 0}, 800);
 				});	
 			});
