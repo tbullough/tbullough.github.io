@@ -449,7 +449,6 @@
 
 				for (var i = videoStart; i < videoEnd; i++) {
 					if (i < videos.length) {
-						console.log(videos[i]);
 
 						var thumb = document.createElement('img');
 						thumb.setAttribute('src', videos[i].thumbnail_large);
@@ -519,8 +518,6 @@
 	        });
 
 	        $('#navigation .menuBand a').on('click', function () {
-				console.log($('#navigation').outerHeight());
-
 				$('#navigation').removeClass('openMenu');
 
 				$('html, body').animate({
@@ -533,18 +530,20 @@
 	        // Scroll To Top Link
 			$(function() {
 				$(window).scroll(function () {
-					var $this = $(this);
+					var $this = $(this),
+						$top = $('#toTop');
 
-					if ($this.scrollTop() > 100 && !($this.hasClass('scrolling'))) {
-						$('#toTop').fadeIn();	
-					} else {
-						$this.removeClass('scrolling');
-						$('#toTop').fadeOut();
+					if ($this.scrollTop() > 100 && !($top.hasClass('scrolling'))) {
+						$top.fadeIn();	
+					} else if ($this.scrollTop() <= 100) {
+						$top.removeClass('scrolling');
+						$top.fadeOut();
 					}
 				});
 			 
 				$('#toTop').on('click', function () {
-					$(this).addClass('scrolling').fadeOut();
+					$(this).addClass('scrolling');
+					$(this).fadeOut();
 					$('body, html').animate({scrollTop: 0}, 800);
 				});	
 
