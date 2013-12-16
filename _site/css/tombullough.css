@@ -212,6 +212,10 @@ p { margin: 0 0 1em; }
 	width: 21%;
 }
 
+.menuBand a:active {
+	border-bottom: 5px solid #64BB5D;
+}
+
 .menuBand a span {
 	float: right;
 	font-size: 20px;
@@ -226,17 +230,33 @@ p { margin: 0 0 1em; }
 	color: #333;
 }
 
-#toTop {
+#toTop{
 	bottom: 10px;
-	background-color: #FFF;
-	border-bottom: 5px solid #CCC;
-	color: #777;
-	cursor: pointer;
 	display: none;
-	padding: 10px 15px;
 	position: fixed;
 	right: 10px;
 	z-index: 10;
+}
+
+#toTop a {
+	background-color: #FFF;
+	border-bottom: 5px solid #CCC;
+	color: #777;
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+}
+
+#toTop a:hover {
+	color: #333;
+}
+
+#toTop a:active {
+	border-bottom: 5px solid #64BB5D;
+}
+
+.touch #toTop a:hover {
+	border-bottom: 5px solid #64BB5D;
 }
 
 
