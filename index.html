@@ -34,7 +34,7 @@ title: Tom Bullough
 						<img src="img/tomBullough.png" />
 					</div>
 
-					<div id="menu">Menu <span class="fui-list"></span></div>
+					<div id="menu"><span class="mainMenuLabel">Menu </span><span class="fui-list"></span></div>
 
 				</div>
 
@@ -195,6 +195,7 @@ title: Tom Bullough
 			$(function(){
 				init();
 			});
+
 		</script>
 
 		<script type="text/javascript">
@@ -204,12 +205,12 @@ title: Tom Bullough
 	        });
 
 	        $('#navigation .menuBand a').on('click', function () {
-				console.log($(this).attr('href'));
+				console.log($('#navigation').outerHeight());
 
 				$('#navigation').removeClass('openMenu');
 
 				$('html, body').animate({
-					scrollTop: ($($(this).attr('href')).offset().top - 150)
+					scrollTop: $($(this).attr('href') + ' .sectionIcon span').offset().top - $('#navigation').outerHeight() - 5
 				}, {duration: 500});
 		
 				return false;

@@ -166,7 +166,7 @@ p { margin: 0 0 1em; }
 	width: 20%;
 }
 
-#menu span {
+#menu .fui-list {
 	float: right;
 	font-size: 20px;
 	padding: 0 0 0 10px;
@@ -184,7 +184,7 @@ p { margin: 0 0 1em; }
 	height: 0;
 	overflow: hidden;
 	position: relative;
-	top: 0;
+	top: -5px;
 
 	-webkit-transition: height 0.3s ease-in;
 	-moz-transition: height 0.3s ease-in;
@@ -480,12 +480,6 @@ p { margin: 0 0 1em; }
 		height: 262px;
 	}
 
-	#menu {
-		right: 10px;
-		left: auto;
-		top: 8px;
-	}
-
 	#videos ul li {
 		float: none;
 		margin: 0 0 40px;
@@ -513,6 +507,21 @@ p { margin: 0 0 1em; }
 
 	#navigation .greenBand {
 		height: 60px;
+	}
+
+	#menu {
+		right: 10px;
+		left: auto;
+		top: 6px;
+		width: 30px;
+	}
+
+	#menu .fui-list {
+		padding: 0 5px;
+	}
+
+	#navigation .mainMenuLabel {
+		display: none;
 	}
 
 	#logo img {
