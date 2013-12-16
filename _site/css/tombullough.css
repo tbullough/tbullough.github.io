@@ -232,6 +232,7 @@ p { margin: 0 0 1em; }
 	border-bottom: 5px solid #CCC;
 	color: #777;
 	cursor: pointer;
+	display: none;
 	padding: 10px 15px;
 	position: fixed;
 	right: 10px;
