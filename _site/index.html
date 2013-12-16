@@ -540,10 +540,11 @@
 					}
 				});
 			 
-				$('#toTop').click(function () {
+				$('#toTop').on('click', function () {
 					$('body, html').animate({scrollTop: 0}, 800);
 				});	
-				$('#toTop').on('hover', function () {
+
+				$('.touch #toTop').on('hover', function () {
 					$('body, html').animate({scrollTop: 0}, 800);
 				});	
 			});
