@@ -541,10 +541,12 @@
 				});
 			 
 				$('#toTop').on('click', function () {
+					$(this).fadeOut();
 					$('body, html').animate({scrollTop: 0}, 800);
 				});	
 
 				$('.touch #toTop').on('hover', function () {
+					$(this).fadeOut();
 					$('body, html').animate({scrollTop: 0}, 800);
 				});	
 			});
