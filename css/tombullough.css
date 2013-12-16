@@ -498,7 +498,7 @@ p { margin: 0 0 1em; }
 
 @media only screen and (max-width : 640px) {
 	#container {
-		margin-top: 265px;
+		margin-top: 260px;
 	}
 
 	#navigation {
@@ -530,7 +530,7 @@ p { margin: 0 0 1em; }
 
 	#background {
 		height: 200px;
-		top: 65px;
+		top: 60px;
 	}
 
 	#background .container {
