@@ -48,7 +48,7 @@ title: Tom Bullough
 					<a href="#articles" class="second">Articles <span class="fui-new"></span></a>
 					<a href="#testimonials">Testimonials <span class="fui-chat"></span></a>
 					<a href="#services" class="fourth second">Services <span class="fui-cmd"></span></a>
-					<a href="#video">Video <span class="fui-video"></span></a>
+					<a href="#videos">Video <span class="fui-video"></span></a>
 					<a href="#shop" class="second">Shop <span class="fui-lock"></span></a>
 					<a href="#contact">Contact <span class="fui-location"></span></a>
 					<a href="#" class="fourth second">Coming Soon <span class="fui-time"></span></a>
@@ -202,6 +202,18 @@ title: Tom Bullough
 	        $('#menu').on('click', function () {
 	        	$('#navigation').toggleClass('openMenu');
 	        });
+
+	        $('#navigation .menuBand a').on('click', function () {
+				console.log($(this).attr('href'));
+
+				$('#navigation').removeClass('openMenu');
+
+				$('html, body').animate({
+					scrollTop: ($($(this).attr('href')).offset().top - 150)
+				}, {duration: 500});
+		
+				return false;
+			});
 	    </script>
 
 		<script>
