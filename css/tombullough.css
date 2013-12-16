@@ -226,6 +226,18 @@ p { margin: 0 0 1em; }
 	color: #333;
 }
 
+#toTop {
+	bottom: 15px;
+	background-color: #FFF;
+	border-bottom: 5px solid #CCC;
+	color: #777;
+	cursor: pointer;
+	padding: 10px 15px;
+	position: fixed;
+	right: 15px;
+	z-index: 10;
+}
+
 
 
 
