@@ -29,7 +29,11 @@
 						<img src="img/tomBullough.png" />
 					</div>
 
-					<div id="menu"><span class="mainMenuLabel">Menu </span><span class="fui-list"></span></div>
+					<div id="menu">
+						<a href="#">
+							<span class="mainMenuLabel">Menu </span><span class="fui-list"></span>
+						</a>
+					</div>
 
 				</div>
 
@@ -517,6 +521,7 @@
 			// Menu
 	        $('#menu').on('click', function () {
 	        	$('#navigation').toggleClass('openMenu');
+	        	return false;
 	        });
 
 	        $('#navigation .menuBand a').on('click', function () {
@@ -547,6 +552,7 @@
 					$(this).addClass('scrolling');
 					$(this).fadeOut();
 					$('body, html').animate({scrollTop: 0}, 800);
+					return false;
 				});	
 
 				$('.touch #toTop').on('hover', function () {

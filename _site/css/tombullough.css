@@ -154,16 +154,24 @@ p { margin: 0 0 1em; }
 }
 
 #menu {
+	left: 40%;
+	position: absolute;
+	text-transform: uppercase;
+	top: 24px;	
+	width: 20%;
+}
+
+#menu a {
 	background-color: #FFF;
 	border-bottom: 5px solid #CCC;
 	color: #777;
-	cursor: pointer;
 	display: block;
-	left: 40%;
 	padding: 12px 10px 12px 10px;
-	position: absolute;
-	top: 24px;	
-	width: 20%;
+	text-decoration: none;
+}
+
+#menu a:hover {
+	color: #333;
 }
 
 #menu .fui-list {
