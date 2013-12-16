@@ -401,12 +401,24 @@ p { margin: 0 0 1em; }
 .serviceArrange {
 	background-color: #EEE;
 	border-bottom: 5px solid #CCC;
-	color: #333;
+	color: #777;
 	float: right;
 	line-height: 20px;
 	margin: 24px 0 0;
 	padding: 10px 10px 14px 10px;
 	text-decoration: none;
+}
+
+.serviceArrange:hover {
+	color: #333;
+}
+
+.serviceArrange:active {
+	border-bottom: 5px solid #64BB5D;
+}
+
+.touch .serviceArrange:hover {
+	border-bottom: 5px solid #64BB5D;
 }
 
 .serviceArrange span {
@@ -465,12 +477,24 @@ p { margin: 0 0 1em; }
 .videoMore {
 	background-color: #FFF;
 	border-bottom: 5px solid #CCC;
-	color: #333;
+	color: #777;
 	float: right;
 	line-height: 20px;
 	margin: 24px 0 0;
 	padding: 10px 10px 14px 10px;
 	text-decoration: none;
+}
+
+.videoMore:hover {
+	color: #333;
+}
+
+.videoMore:active {
+	border-bottom: 5px solid #64BB5D;
+}
+
+.touch .videoMore:hover {
+	border-bottom: 5px solid #64BB5D;
 }
 
 .videoMore span {
