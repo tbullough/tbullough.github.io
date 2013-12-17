@@ -99,7 +99,8 @@ p { margin: 0 0 1em; }
 
 #about,
 #testimonials,
-#videos { background-color: #EEE; }
+#videos,
+#contact { background-color: #EEE; }
 
 
 
@@ -517,6 +518,103 @@ p { margin: 0 0 1em; }
 
 
 
+/*
+	Shop
+*/
+
+.shopLogos div {
+	float: left;
+	text-align: center;
+	width: 45%;
+}
+
+.shopLogos img {
+	max-width: 100%;
+}
+
+.shopLogos .amazon {
+	margin: 2% 0 0 10%;
+}
+
+
+
+
+
+/*
+	Contact
+*/
+
+.contactContainer {
+	margin: 20px 0;
+}
+
+.contactContainer .column {
+	float: left;
+	width: 33%;
+}
+
+#name,
+#email {
+	border: 3px solid transparent;
+	color: #777;
+	font-size: 16px;
+	height: 50px;
+	margin: 0 0 20px;
+	outline: none;
+	padding: 15px;
+	width: 100%;
+	-webkit-appearance: none;
+}
+
+#question {
+	border: 3px solid transparent;
+	color: #777;
+	font-size: 16px;
+	height: 120px;
+	margin: 0 5% 20px;
+	outline: none;
+	padding: 15px;
+	width: 90%;
+	-webkit-appearance: none;
+}
+
+#name:focus,
+#email:focus,
+#question:focus {
+	border: 3px solid #64BB5D;
+	box-shadow: none;
+	-webkit-appearance: none;
+}
+
+#submit {
+	background: #64BB5D none;
+	border-bottom: 5px solid #46943f;
+	border-radius: 0;
+	border-width: 0 0 5px 0;
+	color: #FFF;
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 20px;
+	margin: 0;
+	outline: none;
+	padding: 10px 10px 14px 10px;
+	text-decoration: none;
+	text-shadow: none;	
+}
+
+#submit span {
+	float: right;
+}
+
+#submit:focus {
+	box-shadow: none;
+	-webkit-appearance: none;
+}
+
+
+
+
 
 
 /*
@@ -643,6 +741,19 @@ p { margin: 0 0 1em; }
 		float: left;
 		margin: 0 0 0 15%;
 		width: 85%;
+	}
+
+	#name,
+	#email { width: 100%; }
+
+	#question {
+		margin: 0 0 20px;
+		width: 100%;
+	}
+
+	.contactContainer .column {
+		float: none;
+		width: 100%;
 	}
 
 }
