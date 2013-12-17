@@ -159,6 +159,7 @@ p { margin: 0 0 1em; }
 	text-transform: uppercase;
 	top: 24px;	
 	width: 20%;
+	min-width: 46px;
 }
 
 #menu a {
@@ -166,6 +167,7 @@ p { margin: 0 0 1em; }
 	border-bottom: 5px solid #CCC;
 	color: #777;
 	display: block;
+	height: 20px;
 	padding: 12px 10px 12px 10px;
 	text-decoration: none;
 }
@@ -581,8 +583,12 @@ p { margin: 0 0 1em; }
 	#menu {
 		right: 10px;
 		left: auto;
-		top: 6px;
+		top: 7px;
 		width: 30px;
+	}
+
+	#menu a {
+		padding: 6px 8px 10px 8px;
 	}
 
 	#menu .fui-list {
