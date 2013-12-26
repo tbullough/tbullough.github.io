@@ -87,6 +87,34 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Mono Social Icons Font';
+	src: url('../fonts/MonoSocialIconsFont-1.10.eot');
+	src: url('../fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'), url('../fonts/MonoSocialIconsFont-1.10.woff') format('woff'), url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'), url('../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.symbol, a.symbol:before {
+	font-family: 'Mono Social Icons Font';
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+a.symbol:before {
+	content: attr(title);
+	margin-right: 0.3em;
+	font-size: 130%;
+}
+
 
 
 
@@ -261,6 +289,24 @@ p { margin: 0 0 1em; }
 	margin: 0 1% 12px;
 	padding: 10px 1% 14px;
 	width: 21%;
+}
+
+#social {
+	display: block;
+	right: 0;
+	position: absolute;
+	top: 35px;
+}
+
+#social a {
+	color: #FFF;
+	font-size: 50px;
+	text-decoration: none;
+}
+
+#social div {
+	float: left;
+	margin: 0 10px 0 0;
 }
 
 #toTop{
@@ -548,6 +594,49 @@ p { margin: 0 0 1em; }
 
 
 /*
+	Social Footer
+*/
+
+#socialFooter {
+	background-color: #EFEFEF;
+	text-align: center;
+}
+
+#socialFooter a {
+	color: #64BB5D;
+	font-size: 50px;
+	text-decoration: none;
+}
+
+#socialFooter div {
+	display: inline-block;
+	margin: 0 5px 40px;
+}
+
+
+
+
+
+/*
+	Footer
+*/
+
+#footer { background-color: #64BB5D; }
+
+#footer .container { padding: 15px 20px; }
+
+#footer p {
+	color: #FFF;
+	font-size: 12px;
+	margin: 0;
+	text-align: center;
+}
+
+
+
+
+
+/*
 	Buttons
 */
 
@@ -633,6 +722,8 @@ p { margin: 0 0 1em; }
 		height: 17px;
 		padding: 6px 8px 10px 8px;
 	}
+
+	#social { display: none; }
 
 	#menu label { display: none; }
 
