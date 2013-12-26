@@ -16,11 +16,11 @@
 			</div>
 
 			<div class="column">
-				<textarea id="question" name="question"></textarea>	
+				<textarea id="question" name="question" onfocus="if (this.value === 'Message') { this.value = ''; }" onblur="if (this.value === '') { this.value = 'Message'; }">Message</textarea>	
 			</div>
 
 			<div class="column">
-				<a href="#" id="submit">Submit <span class="fui-arrow-right"></span></a>
+				<a class="button button-green" href="#" id="submit">Submit <span class="fui-arrow-right"></span></a>
 				<input type="submit" style="display: none;" value="Send" id="submitHidden" />
 			</div>
 

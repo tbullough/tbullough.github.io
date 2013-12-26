@@ -12,9 +12,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" type="text/css" media="all" href="css/tombullough.css">
-		<link rel="stylesheet" type="text/css" media="all" href="css/flat-ui.css">
 		<link rel="stylesheet" type="text/css" media="all" href="css/prettyPhoto.css">
-		<link rel="stylesheet" type="text/css" media="all" href="css/formalize.css">
 
 	</head>
 
@@ -31,9 +29,7 @@
 					</div>
 
 					<div id="menu">
-						<a href="#">
-							<span class="mainMenuLabel">Menu </span><span class="fui-list"></span>
-						</a>
+						<a href="#" class="button"><label>Menu</label> <span class="fui-list"></a>
 					</div>
 
 				</div>
@@ -44,14 +40,14 @@
 
 				<div class="container">
 
-					<a href="#about">About <span class="fui-user"></span></a>
-					<a href="#articles" class="second">Articles <span class="fui-new"></span></a>
-					<a href="#testimonials">Testimonials <span class="fui-chat"></span></a>
-					<a href="#services" class="fourth second">Services <span class="fui-cmd"></span></a>
-					<a href="#videos">Video <span class="fui-video"></span></a>
-					<a href="#shop" class="second">Shop <span class="fui-lock"></span></a>
-					<a href="#contact">Contact <span class="fui-location"></span></a>
-					<a href="#" class="fourth second">Coming Soon <span class="fui-time"></span></a>
+					<a class="button button-grey" href="#about">About <span class="fui-user"></span></a>
+					<a class="button button-grey" href="#articles" class="second">Articles <span class="fui-new"></span></a>
+					<a class="button button-grey" href="#testimonials">Testimonials <span class="fui-chat"></span></a>
+					<a class="button button-grey" href="#services" class="fourth second">Services <span class="fui-cmd"></span></a>
+					<a class="button button-grey" href="#videos">Video <span class="fui-video"></span></a>
+					<a class="button button-grey" href="#shop" class="second">Shop <span class="fui-lock"></span></a>
+					<a class="button button-grey" href="#contact">Contact <span class="fui-location"></span></a>
+					<a class="button button-grey" href="#" class="fourth second">Coming Soon <span class="fui-time"></span></a>
 
 				</div>
 
@@ -340,7 +336,7 @@
 	
 			<h3>Service 1 &pound;xx.xx (inc VAT)</h3>
 			<div class="columns"><p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p><p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p></div>
-			<a class="serviceArrange" href="">Arrange a session <span class="fui-calendar-solid"></span></a>
+			<a class="button button-grey serviceArrange" href="#">Arrange a session <span class="fui-calendar-solid"></span></a>
   			<div class="clear"></div>
 
   		</div>
@@ -351,7 +347,7 @@
 	
 			<h3>Service 2 &pound;xx.xx (inc VAT)</h3>
 			<div class="columns"><p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p><p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p></div>
-			<a class="serviceArrange" href="">Arrange a session <span class="fui-calendar-solid"></span></a>
+			<a class="button button-grey serviceArrange" href="#">Arrange a session <span class="fui-calendar-solid"></span></a>
   			<div class="clear"></div>
 
   		</div>
@@ -362,7 +358,7 @@
 	
 			<h3>Service 3 &pound;xx.xx (inc VAT)</h3>
 			<div class="columns"><p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p><p>Some info on services Some info on services Some info on services Some info on services Some info on services Some info on services</p></div>
-			<a class="serviceArrange" href="">Arrange a session <span class="fui-calendar-solid"></span></a>
+			<a class="button button-grey serviceArrange" href="#">Arrange a session <span class="fui-calendar-solid"></span></a>
   			<div class="clear"></div>
 
   		</div>
@@ -387,7 +383,7 @@
 
 	<div class="clear"></div>
 
-	<a class="videoMore" id="showMoreThumbs" href="#">Load more <span class="fui-video"></span></a>
+	<a class="button videoMore" id="showMoreThumbs" href="#">Load more <span class="fui-video"></span></a>
 
 	<div class="clear"></div>
 
@@ -445,11 +441,11 @@
 			</div>
 
 			<div class="column">
-				<textarea id="question" name="question"></textarea>	
+				<textarea id="question" name="question" onfocus="if (this.value === 'Message') { this.value = ''; }" onblur="if (this.value === '') { this.value = 'Message'; }">Message</textarea>	
 			</div>
 
 			<div class="column">
-				<a href="#" id="submit">Submit <span class="fui-arrow-right"></span></a>
+				<a class="button button-green" href="#" id="submit">Submit <span class="fui-arrow-right"></span></a>
 				<input type="submit" style="display: none;" value="Send" id="submitHidden" />
 			</div>
 
@@ -465,7 +461,7 @@
 		</div>
 
 		<div id="toTop">
-			<a href="#">Top</a>
+			<a class="button" href="#">Top</a>
 		</div>
 
 		<script type="text/javascript" src="js/modernizr.js"></script>
