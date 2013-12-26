@@ -291,24 +291,6 @@ p { margin: 0 0 1em; }
 	width: 21%;
 }
 
-#social {
-	display: block;
-	right: 0;
-	position: absolute;
-	top: 35px;
-}
-
-#social a {
-	color: #FFF;
-	font-size: 50px;
-	text-decoration: none;
-}
-
-#social div {
-	float: left;
-	margin: 0 10px 0 0;
-}
-
 #toTop{
 	bottom: 20px;
 	display: none;
@@ -597,20 +579,60 @@ p { margin: 0 0 1em; }
 	Social Footer
 */
 
-#socialFooter {
+.twitter {
+	background-color: #5BBBED;
+	line-height: 46px;
+}
+
+.facebook {
+	background-color: #5a7ac7;
+	line-height: 42px;
+}
+
+.vimeo {
+	background-color: #7fdde7;
+	line-height: 42px;
+}
+
+.social a {
+	color: #FFF;
+	display: block;
+	font-size: 50px;
+	height: 50px;
+	text-align: center;
+	text-decoration: none;
+	width: 50px;
+}
+
+.social div {
+	border-radius: 25px;
+	display: inline-block;
+	height: 50px;
+	margin: 0 5px 40px;
+	width: 50px;
+}
+
+#container .social {
 	background-color: #EFEFEF;
 	text-align: center;
 }
 
-#socialFooter a {
-	color: #64BB5D;
+#navigation .social {
+	display: block;
+	right: 0;
+	position: absolute;
+	top: 25px;
+}
+
+#navigation .social a {
+	color: #FFF;
 	font-size: 50px;
 	text-decoration: none;
 }
 
-#socialFooter div {
-	display: inline-block;
-	margin: 0 5px 40px;
+#navigation .social div {
+	float: left;
+	margin: 0 10px 0 0;
 }
 
 
@@ -723,7 +745,7 @@ p { margin: 0 0 1em; }
 		padding: 6px 8px 10px 8px;
 	}
 
-	#social { display: none; }
+	#navigation .social { display: none; }
 
 	#menu label { display: none; }
 
