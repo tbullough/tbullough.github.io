@@ -567,6 +567,8 @@ p { margin: 0 0 1em; }
 .button:active,
 .touch .button:hover { border-bottom: 5px solid #64BB5D; }
 
+.button label { cursor: pointer; }
+
 .button span {
 	color: #64BB5D;
 	float: right;
