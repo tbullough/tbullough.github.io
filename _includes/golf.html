@@ -1,0 +1,25 @@
+<div class="container">
+
+	<div class="sectionIcon">
+		<span class="tbi-golf"></span>
+	</div>
+
+	{% for golf in site.data.golf %}
+	
+		{% if forloop.index == 1 %}
+			<h2 class="sectionTitle golfTitle">{{ golf.heading }}</h2>
+		{% endif %}
+	
+		<div class="article">
+			
+			<p class="articleSubTitle">{{ golf.title }}</p>
+			
+			<div class="columns">
+				{{ golf.content }}
+			</div>
+			
+		</div>
+
+	{% endfor %}
+
+</div>

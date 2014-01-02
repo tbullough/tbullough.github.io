@@ -1,13 +1,13 @@
 <div class="container">
 
 	<div class="sectionIcon">
-		<span class="fui-new"></span>
+		<span class="tbi-articles"></span>
 	</div>
 
 	{% for article in site.data.articles %}
 	
 		{% if forloop.index == 1 %}
-			<h2 class="sectionTitle articleTitle">{{ article.title }}</h2>
+			<h2 class="sectionTitle articleTitle">{{ article.heading }}</h2>
 		{% endif %}
 	
 		<div class="article">
