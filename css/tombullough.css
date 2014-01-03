@@ -71,7 +71,7 @@ textarea { resize: vertical; }
 */
 
 body {
-	font-family: 'latoregular', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	line-height: 1.6em;
 	margin: 0 auto;
 	padding: 0;
@@ -79,7 +79,7 @@ body {
 
 h1, h2 {
 	color: #64BB5D;
-	font-family: 'benchnineregular', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
 	text-transform: uppercase;
 }
 
@@ -276,7 +276,6 @@ p { margin: 0 0 1em; }
 
 .articleSubTitle {
 	font-size: 18px;
-	font-family: 'latobold', sans-serif;
 	font-weight: 700;
 }
 
@@ -322,7 +321,6 @@ p { margin: 0 0 1em; }
 .testimonialContent p { text-align: justify; }
 
 .testimonialSubTitle {
-	font-family: 'latobold', sans-serif;	
 	font-size: 18px;
 	font-weight: 700;
 	margin: 0 0 20px;
@@ -361,7 +359,6 @@ p { margin: 0 0 1em; }
 }
 
 .service h3 {
-	font-family: 'latobold', sans-serif;
 	font-weight: 700;
 	margin: 0 0 20px;
 }
@@ -403,14 +400,12 @@ p { margin: 0 0 1em; }
 
 #videos .videoTitle {
 	color: #333;
-	font-family: 'latobold', sans-serif;
 	font-weight: 700;
 	margin: 10px 0 0;
 }
 
 #videos .videoDescription {
 	color: #333;
-	font-family: 'latoregular', sans-serif;
 	font-weight: 400;
 	margin: 0;
 }
