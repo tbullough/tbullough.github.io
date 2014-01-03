@@ -511,7 +511,6 @@ p { margin: 0 0 1em; }
 
 .twitter:hover { background-color: #5BBBED; }
 
-
 .facebook:hover { background-color: #5a7ac7; }
 
 .vimeo:hover { background-color: #7fdde7; }
@@ -526,6 +525,8 @@ p { margin: 0 0 1em; }
 	text-decoration: none;
 	width: 50px;
 }
+
+.facebook a { font-size: 24px; }
 
 .social div {
 	background-color: #999;
