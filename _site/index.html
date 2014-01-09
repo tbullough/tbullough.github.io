@@ -11,6 +11,13 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+		<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+		<script>
+			WebFont.load({
+				google: { families: ['Roboto Condensed:400', 'Roboto Condensed:700', 'Open Sans:400', 'Open Sans:700'] }
+			});
+		</script>
+
 		<link rel="stylesheet" type="text/css" media="all" href="css/tombullough.css">
 		<link rel="stylesheet" type="text/css" media="all" href="css/prettyPhoto.css">
 
@@ -75,12 +82,11 @@
 		</div>
 
 		<div id="background">
-			
-			<div class="container">
 				
-				<h1>I am Tom Bullough.<br />Developing athletes<br />to full potential.</h1>
+			<div class="banner banner-1"></div>
+			<div class="banner banner-2"></div>
 
-			</div>
+			<h1>I am Tom Bullough.<br />Developing athletes<br />to full potential.</h1>
 
 		</div>
 
@@ -470,11 +476,11 @@
 
 	<div class="shopLogos">
 		<div class="ebay">
-			<img src="img/ebay.png" width="195" />
+			<img src="img/ebay.png" width="197" />
 		</div>
 
 		<div class="amazon">
-			<img src="img/amazon.png" width="197" />
+			<img src="img/amazon.png" width="183" />
 		</div>
 	</div>
 
@@ -494,7 +500,7 @@
 
 	<div class="contactContainer">
 		
-		<form action="http://getsimpleform.com/messages?form_api_token=cb07b81b6b2fe909c55d026ae18cc304" method="post">
+		<form action="" id="tbForm" method="post">
 
 			<div class="column">
 				<input type="text" name="Name" id="name" placeholder="Name" />
@@ -695,6 +701,39 @@
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 			ga('create', 'UA-46288592-1', 'tombullough.co.uk');
 			ga('send', 'pageview');
+
+			// Form Submission
+			$('#submit').on('click', function(){
+
+				if (!$(this).hasClass('sent')) {
+
+					var emptyField = false;
+
+					$('#tbForm').find('input, textarea').each(function(){
+						if ($(this).val() === "" || $(this).val() === "Message") {
+							$(this).addClass("error");
+							emptyField = true;
+						} else {
+							$(this).removeClass("error");
+						}
+					});
+
+					if (!emptyField) {
+						$.ajax({
+							dataType: "jsonp",
+							url: "http://getsimpleform.com/messages/ajax?form_api_token=cb07b81b6b2fe909c55d026ae18cc304",
+							data: $("#tbForm").serialize()
+						}).done(function(){
+							$('#tbForm').find('input').val('');
+							$('#tbForm').find('textarea').val('Message');
+							
+							$('#submit').addClass('sent').html('Thanks');
+						});
+					}
+				}
+
+				return false;
+			});
 		</script>
 
 	</body>

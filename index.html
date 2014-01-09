@@ -87,12 +87,11 @@ title: Tom Bullough
 		</div>
 
 		<div id="background">
-			
-			<div class="container">
 				
-				<h1>I am Tom Bullough.<br />Developing athletes<br />to full potential.</h1>
+			<div class="banner banner-1"></div>
+			<div class="banner banner-2"></div>
 
-			</div>
+			<h1>I am Tom Bullough.<br />Developing athletes<br />to full potential.</h1>
 
 		</div>
 
@@ -306,6 +305,39 @@ title: Tom Bullough
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 			ga('create', 'UA-46288592-1', 'tombullough.co.uk');
 			ga('send', 'pageview');
+
+			// Form Submission
+			$('#submit').on('click', function(){
+
+				if (!$(this).hasClass('sent')) {
+
+					var emptyField = false;
+
+					$('#tbForm').find('input, textarea').each(function(){
+						if ($(this).val() === "" || $(this).val() === "Message") {
+							$(this).addClass("error");
+							emptyField = true;
+						} else {
+							$(this).removeClass("error");
+						}
+					});
+
+					if (!emptyField) {
+						$.ajax({
+							dataType: "jsonp",
+							url: "http://getsimpleform.com/messages/ajax?form_api_token=cb07b81b6b2fe909c55d026ae18cc304",
+							data: $("#tbForm").serialize()
+						}).done(function(){
+							$('#tbForm').find('input').val('');
+							$('#tbForm').find('textarea').val('Message');
+							
+							$('#submit').addClass('sent').html('Thanks');
+						});
+					}
+				}
+
+				return false;
+			});
 		</script>
 
 	</body>

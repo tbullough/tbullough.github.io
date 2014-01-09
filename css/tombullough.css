@@ -136,23 +136,68 @@ p { margin: 0 0 1em; }
 */
 
 #background {
-	background: #40444C url('../img/backgroundTile.png') repeat-x;
+	background: #40444C;
 	height: 370px;
 	overflow: hidden;
 	position: fixed;
 	top: 100px;
 	width: 100%;
-	z-index: -1;
+	z-index: 0;
 }
 
-#background .container {
-	background: transparent url('../img/background.jpg') 100% 0 no-repeat;
+#background .banner {
 	height: 370px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#background .banner-1 {
+	background: #40444C url('../img/tb-slider-1.jpg') 50% 50% no-repeat;
+	z-index: 1;
+}
+
+#background .banner-2 {
+	background: #40444C url('../img/tb-slider-2.jpg') 50% 50% no-repeat;
+	z-index: 2;
+
+	-webkit-animation-name: cf3FadeInOut;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-direction: alternate;
+	-webkit-transition: opacity 1s ease-in-out;
+
+	-moz-animation-name: cf3FadeInOut;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-duration: 10s;
+	-moz-animation-direction: alternate;
+	-moz-transition: opacity 1s ease-in-out;
+
+	-o-animation-name: cf3FadeInOut;
+	-o-animation-timing-function: ease-in-out;
+	-o-animation-iteration-count: infinite;
+	-o-animation-duration: 10s;
+	-o-animation-direction: alternate;
+	-o-transition: opacity 1s ease-in-out;
+
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	animation-direction: alternate;
+	transition: opacity 1s ease-in-out;
 }
 
 #background h1 {
 	font-size: 60px;
 	line-height: 60px;
+	margin: 95px auto;
+	position: relative;
+	width: 900px;
+	z-index: 3;
 }
 
 
@@ -482,6 +527,16 @@ p { margin: 0 0 1em; }
 	-webkit-appearance: none;
 }
 
+#submit.sent {
+	background-color: #CCC;
+	border-color: #999;
+	cursor: default;
+}
+
+#tbForm .error {
+	border-color: #C00;
+}
+
 
 
 
@@ -589,7 +644,11 @@ p { margin: 0 0 1em; }
 	Footer
 */
 
-#footer { background-color: #64BB5D; }
+#footer {
+	background-color: #64BB5D;
+	position: relative;
+	z-index: 5;
+}
 
 #footer .container { padding: 15px 20px; }
 
@@ -708,15 +767,10 @@ p { margin: 0 0 1em; }
 		top: 60px;
 	}
 
-	#background .container {
-		background-position: 100% 50%;
-		height: 200px;
-		padding: 25px 20px;
-	}
-
 	#background h1 {
 		font-size: 32px;
 		line-height: 32px;
+		margin: 50px 0 50px 20px;
 	}
 
 	.columns {
@@ -758,4 +812,34 @@ p { margin: 0 0 1em; }
 		width: 100%;
 	}
 
+}
+
+/* CSS Transitions */
+
+@-webkit-keyframes cf3FadeInOut {
+	0% { opacity: 1; }
+	45% { opacity: 1; }
+	55% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+@-moz-keyframes cf3FadeInOut {
+	0% { opacity: 1; }
+	45% { opacity: 1; }
+	55% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+@-o-keyframes cf3FadeInOut {
+	0% { opacity: 1; }
+	45% { opacity: 1; }
+	55% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+@keyframes cf3FadeInOut {
+	0% { opacity: 1; }
+	45% { opacity: 1; }
+	55% { opacity: 0; }
+	100% { opacity: 0; }
 }
