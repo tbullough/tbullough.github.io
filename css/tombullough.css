@@ -154,12 +154,12 @@ p { margin: 0 0 1em; }
 }
 
 #background .banner-1 {
-	background: #40444C url('../img/tb-slider-1.jpg') 50% 50% no-repeat;
+	background: #FFF url('../img/tb-slider-3.jpg') 50% 50% no-repeat;
 	z-index: 1;
 }
 
 #background .banner-2 {
-	background: #40444C url('../img/tb-slider-2.jpg') 50% 50% no-repeat;
+	background: #FFF url('../img/tb-slider-4.jpg') 50% 50% no-repeat;
 	z-index: 2;
 
 	-webkit-animation-name: cf3FadeInOut;
